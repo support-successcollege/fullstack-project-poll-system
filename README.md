@@ -1,119 +1,119 @@
 # Polls System - Backend Implementation
 
-*This project constitutes 15% of the final grade. A passing grade is 70 or above.*
+*פרויקט זה מהווה 15% מהציון הכללי. ציון עובר הינו 70 ומעלה.*
 
-## Submission Requirements:
-1. Follow all instructions and build the project accordingly.
-2. Prepare a test file containing screenshots as per the requirements detailed below.
+## תנאי הגשה:
+1. יש לעקוב אחר כל ההנחיות, ולבנות את הפרויקט לפיהן.
+2. יש להכין קובץ בדיקות שיכיל בתוכו צילומי מסך עפ הדרישות שיפורטו למטה.
 
 ## Instructions:
 
-Your mission is to create a poll system that will be used to ask the company customers any questions they want and process calculations about the data.
+המטרה שלך היא ליצור מערכת סקרים שתשמש לשאול את לקוחות החברה כל שאלה שהם רוצים ולעבד חישובים על הנתונים.
 
-### Example Questions:
-1. **Between the following, what do you most love to do?**
-   - a. Watch TV
-   - b. Play the computer
-   - c. Hanging out with friends
-   - d. Travel the world
+### דוגמאות לשאלות:
+1. **מבין האפשרויות הבאות, מה אתה הכי אוהב לעשות?**
+   - a. לצפות בטלוויזיה
+   - b. לשחק במחשב
+   - c. להיפגש עם חברים
+   - d. לטייל בעולם
 
-2. **Where is your preferred place to travel?**
-   - a. USA
-   - b. France
-   - c. South America
-   - d. Thailand
+2. **מהו המקום המועדף עליך לטייל?**
+   - a. ארה"ב
+   - b. צרפת
+   - c. דרום אמריקה
+   - d. תאילנד
 
 ### Services:
 
 #### User Service
-Responsible for saving all the data about system users, including:
-- Unique user id
-- User first name
-- User last name
-- User email
-- User age
-- User address
-- User joining date
+אחראי לשמור את כל הנתונים על משתמשי המערכת, כולל:
+- מזהה משתמש ייחודי
+- שם פרטי של המשתמש
+- שם משפחה של המשתמש
+- דוא"ל של המשתמש
+- גיל המשתמש
+- כתובת המשתמש
+- תאריך הצטרפות המשתמש
 
-Only registered users can answer poll questions. If a user is not registered, they cannot submit answers. If a user deletes themselves from the system, all their answers should also be deleted.
+רק משתמשים רשומים יכולים לענות על שאלות סקר. אם משתמש אינו רשום, הוא אינו יכול להגיש תשובות. אם משתמש מוחק את עצמו מהמערכת, כל התשובות שלו לשאלות נמחקות גם כן.
 
-**CRUD Implementation:**
-- Create a user
-- Update a user
-- Delete a user
-- Get user info
+**מימוש CRUD:**
+- יצירת משתמש
+- עדכון משתמש
+- מחיקת משתמש
+- קבלת מידע על משתמש
 
 #### Poll Service
-Responsible for saving all poll questions and user answers for each question. Each question is a multiple-choice question with four options.
+אחראי לשמור את כל שאלות הסקרים ואת תשובות המשתמשים לכל שאלה. כל שאלה היא שאלה אמריקאית עם ארבע אפשרויות.
 
-**Poll Question Data:**
-- Unique question id
-- Question title
-- First answer option
-- Second answer option
-- Third answer option
-- Fourth answer option
+**נתוני שאלת סקר:**
+- מזהה שאלה ייחודי
+- כותרת השאלה
+- אפשרות תשובה ראשונה
+- אפשרות תשובה שנייה
+- אפשרות תשובה שלישית
+- אפשרות תשובה רביעית
 
-**CRUD Implementation:**
-- Create a question
-- Update a question
-- Delete a question
-- Get question info
+**מימוש CRUD:**
+- יצירת שאלה
+- עדכון שאלה
+- מחיקת שאלה
+- קבלת מידע על שאלה
 
-**Additional Requirements:**
-- Save user answers to each question
-- Support for scenarios where not all users answer all questions or some questions have no answers
+**דרישות נוספות:**
+- שמירת תשובות משתמשים לכל שאלה
+- תמיכה בתרחישים שבהם לא כל המשתמשים עונים על כל השאלות או שיש שאלות שאין להן תשובות
 
 ### API Requirements:
-- By question id:
-  - Return how many users chose each option
-  - Return the total number of users who answered the question
-- By user id:
-  - Return the user's answers to each question
-  - Return the number of questions the user answered
-- Return all questions and the number of users who chose each option for each question
+- לפי מזהה שאלה:
+  - החזרת מספר המשתמשים שבחרו בכל אפשרות
+  - החזרת מספר המשתמשים שענו על השאלה
+- לפי מזהה משתמש:
+  - החזרת תשובות המשתמש לכל שאלה
+  - החזרת מספר השאלות שהמשתמש ענה עליהן
+- החזרת כל השאלות ומספר המשתמשים שבחרו בכל אפשרות
 
-**Implementation Notes:**
-- Backend only, no UI needed
-- Use Java and Spring Boot framework
-- Use H2 database
-- Follow best practices learned in the course
-  - Use MVC architecture (Controller, Service, Repository)
-  - Use configuration when needed
-  - Write valid Java class names and SQL table names
-  - Use the Request to Response flow as learned in class
+**הערות יישום:**
+- צד שרת בלבד, אין צורך ב-UI
+- שימוש ב-Java וב-Spring Boot framework
+- שימוש ב-H2 database
+- יש לפעול לפי הפרקטיקות הטובות ביותר שנלמדו בקורס
+  - שימוש ב-MVC architecture (Controller, Service, Repository)
+  - שימוש ב-configuration כשצריך
+  - כתיבת שמות מחלקות Java ושמות טבלאות SQL תקינים
+  - שימוש ב-Request to Response flow כפי שנלמד בכיתה
 
-**Service Communication:**
-- Services should communicate using the API endpoints created
-- Each service should connect to its own H2 database and save relevant data
+**תקשורת שירותים:**
+- השירותים צריכים לתקשר באמצעות API endpoints שנוצרו
+- כל שירות צריך להתחבר ל-H2 database שלו ולשמור את הנתונים הרלוונטיים
 
-## Test File: (Screenshots/Video)
+## קובץ בדיקות: (צילומי מסך/וידיאו)
 
-At the end of the project, before submission, go through all the guidelines below and add to the project a directory named "tests" containing all the necessary images.
+בסוף הפרויקט לפני שאתם מגישים תעברו על כל ההנחיות פה למטה ותצרפו לפרויקט תיקייה בשם "בדיקות" והיא תכיל את כל התמונות ומה שצריך.
 
-* No code screenshots are needed, only screenshots of requests that worked (including error-handling requests that do not crash the server).
+* אין צורך בצילומי קוד אלא רק בבקשות שעבדו (כולל בקשות שמטפלות בשגיאות בלי להקריס את השרת)
 
-1. **Full CRUD support for users:**
-   - Create a user (screenshot)
-   - Update a user (screenshot)
-   - Delete a user (screenshot)
-   - Get user info (screenshot)
+1. **תמיכה ב-CRUD מלא למשתמשים:**
+   - יצירת משתמש (צילום מסך)
+   - עדכון משתמש (צילום מסך)
+   - מחיקת משתמש (צילום מסך)
+   - קבלת מידע על המשתמש (צילום מסך)
 
-2. **Full CRUD support for questions:**
-   - Create a question (screenshot)
-   - Update a question (screenshot)
-   - Delete a question (screenshot)
-   - Get question info (screenshot)
+2. **תמיכה ב-CRUD מלא לשאלות:**
+   - יצירת שאלה (צילום מסך)
+   - עדכון שאלה (צילום מסך)
+   - מחיקת שאלה (צילום מסך)
+   - קבלת מידע על שאלה (צילום מסך)
 
-3. **Saving user answers to poll questions (show that results are saved)**
+3. **שמירת תשובות משתמשים לשאלות סקר (להראות שנשמרים תוצאות)**
 
-4. **Error handling such as lack of answers for all questions (screenshots)**
+4. **טיפול בשגיאות כמו חוסר תשובות לכל השאלות (צילומי מסך)**
 
-5. **Statistical information on user answers: (screenshot of the request that worked, not the code)**
-   - Number of users who chose each option for a question (screenshot)
-   - Number of users who answered a specific question (screenshot)
-   - Get answers from a specific user for all questions (screenshot)
-   - Number of questions a user answered (screenshot)
-   - Get all questions and the number of users who chose each option (screenshot)
+5. **מידע סטטיסטי על תשובות המשתמשים: (צילום מסך של הבקשה שעבדה, לא של הקוד)**
+   - מספר המשתמשים שבחרו כל אפשרות בשאלה (צילום מסך)
+   - מספר המשתמשים שענו על שאלה ספציפית (צילום מסך)
+   - קבלת תשובות ממשתמש מסוים לכל השאלות (צילום מסך)
+   - מספר השאלות שהמשתמש ענה עליהן (צילום מסך)
+   - קבלת כל השאלות ומספר הבחירות בכל אפשרות (צילום מסך)
 
-**Good Luck!**
+**בהצלחה!**
