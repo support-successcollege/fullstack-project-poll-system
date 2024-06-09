@@ -1,10 +1,10 @@
 # Polls System - Backend Implementation
 
-*פרויקט זה מהווה 15% מהציון הכללי. ציון עובר הינו 70 ומעלה.*
+*This project constitutes 15% of the final grade. A passing grade is 70 or above.*
 
-## תנאי הגשה:
-1. יש לעקוב אחר כל ההנחיות, ולבנות את הפרויקט לפיהן.
-2. יש להכין קובץ בדיקות שיכיל בתוכו צילומי מסך עפ הדרישות שיפורטו למטה.
+## Submission Requirements:
+1. Follow all instructions and build the project accordingly.
+2. Prepare a test file containing screenshots as per the requirements detailed below.
 
 ## Instructions:
 
@@ -87,55 +87,33 @@ Responsible for saving all poll questions and user answers for each question. Ea
 - Services should communicate using the API endpoints created
 - Each service should connect to its own H2 database and save relevant data
 
+## Test File: (Screenshots/Video)
 
-polls-system-backend/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── firstProject/
-│   │   │           ├── controller/
-│   │   │           │   └── UserController.java
-│   │   │           ├── service/
-│   │   │           │   ├── UserService.java
-│   │   │           │   └── UserServiceImpl.java
-│   │   │           ├── repository/
-│   │   │           │   ├── UserRepository.java
-│   │   │           │   └── UserRepositoryImpl.java
-│   │   │           ├── model/
-│   │   │           │   ├── User.java
-│   │   │           │   └── Status.java
-│   │   │           └── PollsSystemApplication.jav
+At the end of the project, before submission, go through all the guidelines below and add to the project a directory named "tests" containing all the necessary images.
 
+* No code screenshots are needed, only screenshots of requests that worked (including error-handling requests that do not crash the server).
 
+1. **Full CRUD support for users:**
+   - Create a user (screenshot)
+   - Update a user (screenshot)
+   - Delete a user (screenshot)
+   - Get user info (screenshot)
 
-## קובץ בדיקות: (צילומי מסך/וידיאו)
+2. **Full CRUD support for questions:**
+   - Create a question (screenshot)
+   - Update a question (screenshot)
+   - Delete a question (screenshot)
+   - Get question info (screenshot)
 
-בסוף הפרויקט לפני שאתם מגישים תעברו על כל ההנחיות פה למטה ותצרפו לפרויקט תיקייה בשם "בדיקות" והיא תכיל את כל התמונות ומה שצריך.
+3. **Saving user answers to poll questions (show that results are saved)**
 
-* אין צורך בצילומי קוד אלא רק בבקשות שעבדו (כולל בקשות שמטפלות בשגיאות בלי להקריס את השרת)
+4. **Error handling such as lack of answers for all questions (screenshots)**
 
-1. **תמיכה ב-קרוד מלא למשתמשים:**
-   - יצירת משתמש (צילום מסך)
-   - עדכון משתמש (צילום מסך)
-   - מחיקת משתמש (צילום מסך)
-   - קבלת מידע על המשתמש (צילום מסך)
-
-2. **תמיכה בקרוד מלא לשאלות:**
-   - יצירת שאלה (צילום מסך)
-   - עדכון שאלה (צילום מסך)
-   - מחיקת שאלה (צילום מסך)
-   - קבלת מידע על שאלה (צילום מסך)
-
-3. **שמירת תשובות משתמשים לשאלות סקר (להראות שנשמרים תוצאות)**
-
-4. **טיפול בשגיאות כמו חוסר תשובות לכל השאלות (צילומי מסך)**
-
-5. **מידע סטטיסטי על תשובות המשתמשים: (צילום מסך של הבקשה שעבדה, לא של הקוד)**
-   - מספר המשתמשים שבחרו כל אפשרות בשאלה (צילום מסך)
-   - מספר המשתמשים שענו על שאלה ספציפית (צילום מסך)
-   - קבלת תשובות ממשתמש מסוים לכל השאלות (צילום מסך)
-   - מספר השאלות שהמשתמש ענה עליהן (צילום מסך)
-   - קבלת כל השאלות ומספר הבחירות בכל אפשרות (צילום מסך)
+5. **Statistical information on user answers: (screenshot of the request that worked, not the code)**
+   - Number of users who chose each option for a question (screenshot)
+   - Number of users who answered a specific question (screenshot)
+   - Get answers from a specific user for all questions (screenshot)
+   - Number of questions a user answered (screenshot)
+   - Get all questions and the number of users who chose each option (screenshot)
 
 **Good Luck!**
